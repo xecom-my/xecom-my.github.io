@@ -1,0 +1,30 @@
+- name: Malaysian Federal
+  src: /assets/images/customers/malaysian-federal.png
+  width: 50
+- name: Sarawak Government
+  src: /assets/images/customers/sarawak-gov.png
+  width: 50
+- name: Pusat Jantung Sarawak
+  src: /assets/images/customers/pusat-jantung.png
+  width: 90
+- name: Yayasan Sarawak
+  src: /assets/images/customers/yayasan-sarawak.png
+  width: 40
+- name: Polis Diraja Malaysia
+  src: /assets/images/customers/pdrm.jpeg
+  width: 40
+- name: Bomba dan Penyelamat
+  src: /assets/images/customers/bomba.png
+  width: 40
+- name: Pejabat Kesihatan Kuching
+  src: /assets/images/customers/pkb.jpeg
+  width: 40
+- name: Regal Retirement Group
+  src: /assets/images/customers/regal.png
+  width: 120
+- name: LePaPa
+  src: /assets/images/customers/lepapa.jpeg
+  width: 100
+- name: Roxy Hotel Serian
+  src: /assets/images/customers/roxy.png
+  width: 100

@@ -1,0 +1,79 @@
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.short-divider {
+  width: 123px;
+  height: 1px;
+  margin: 0 auto 1rem auto;
+  background-color: rgba(black, 0.1);
+}
+
+.min-w-100 {
+  min-width: 100%;
+}
+
+.min-h-100 {
+  min-height: 100%;
+}
+
+.carousel-fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.form-control::placeholder
+{
+  opacity: .5;
+}
+
+.brand {
+  height: 30px;
+}
+
+// Shadow
+.shadow-slug {
+  transition: box-shadow 1s;
+  -webkit-transition: box-shadow 1s;
+}
+
+.shadow-slow {
+  transition: box-shadow 600ms;
+  -webkit-transition: box-shadow 600ms;
+}
+
+.shadow-normal {
+  transition: box-shadow 400ms;
+  -webkit-transition: box-shadow 400ms;
+}
+
+.shadow-fast {
+  transition: box-shadow 200ms;
+  -webkit-transition: box-shadow 200ms
+}
+
+// Unbordered-list
+table.unbordered-table tbody {
+  tr {
+    &:not(:last-child) {
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    td {
+      padding: 1rem;
+    }
+  }
+}

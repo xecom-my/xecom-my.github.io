@@ -1,0 +1,82 @@
+---
+title: Contact Us
+---
+
+<div class="container">
+  <h1 class="text-center my-3">{{ page.title }}</h1>
+
+  <table class="unbordered-table mx-auto mb-5">
+    <tbody>
+      <tr>
+        <td>Telephone</td>
+        <td><a href="tel:+60-82-365-368">082-365 368</a></td>
+      </tr>
+      <tr>
+        <td>Fax</td>
+        <td><a href="fax:+60-82-365-368">082-365 992</a></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><a href="mailto:{{ site.email }}">{{ site.email }}</a></td>
+      </tr>
+      <tr>
+        <td>Business Address</td>
+        <td><a href="https://goo.gl/maps/TG4YnXG2PrC2">{{ site.address }}</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <section class="text-center pt-3 pb-5">
+    <h2>Enquiry Form</h2>
+    <div class="short-divider"></div>
+    <div class="text-left">
+      <form class="needs-validation" novalidate method="POST" action="https://formspree.io/{{ site.email }}">
+        <div class="form-group row p-3">
+          <label class="col-sm-4" for="name">Name</label>
+          <div class="input-group px-0 col-sm-8">
+            <span class="input-group-prepend">
+              <select class="form-control custom-select" style="border-radius: .25rem 0 0 .25rem;" name="salutation" required>
+                <option selected disabled>Salutation</option>
+                <option>Mr</option>
+                <option>Ms</option>
+                <option>Mdm</option>
+              </select>
+            </span>
+            <input class="form-control" id="name" type="text" name="name" placeholder="John Appleseed" style="border-radius: 0 .25rem .25rem 0;" required>
+          </div>
+        </div>
+        <div class="form-group row p-3">
+          <label class="col-sm-4" for="email">Email</label>
+          <input class="form-control col-sm-8" id="email" type="email" name="email" placeholder="example@mail.com" required>
+          <div class="invalid-feedback offset-sm-4">Email address is invalid</div>
+        </div>
+        <div class="form-group row p-3">
+          <label class="col-sm-4" for="contact">Contact No.</label>
+          <input class="form-control col-sm-8" id="contact" type="tel" name="contact no." placeholder="012-345 678" required>
+          <div class="invalid-feedback offset-sm-4">Please enter your contact number</div>
+        </div>
+        <div class="form-group row p-3">
+          <label class="col-sm-4" for="type">Enquiry Type</label>
+          <select class="form-control custom-select cus col-sm-8" id="type" name="enquiry type" required>
+            <option selected disabled>Select a type of enquiry</option>
+            <option>Sales</option>
+            <option>Service</option>
+            <option>Consumables and Parts</option>
+            <option>Others</option>
+          </select>
+          <div class="invalid-feedback offset-sm-4">Please select an enquiry type</div>
+        </div>
+        <div class="form-group row p-3">
+          <label class="col-sm-4" for="desc">Description</label>
+          <textarea class="form-control col-sm-8" id="desc" name="description" rows="3" placeholder="A short description of your enquiry" required></textarea>
+          <div class="invalid-feedback offset-sm-4">Please specify your enquiry description</div>
+        </div>
+        <div class="offset-sm-4">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+<script src="{{ '/assets/js/form-validation.js' | relative_url }}"></script>

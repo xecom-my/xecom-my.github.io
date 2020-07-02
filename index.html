@@ -1,0 +1,156 @@
+---
+title: Home
+---
+
+<div id="top-carousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#top-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#top-carousel" data-slide-to="1"></li>
+    <li data-target="#top-carousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" style="height: calc(100vw * 0.5625); min-height: 40vh; max-height: 60vh;">
+    <div class="carousel-item h-100 active">
+      <img class="carousel-fit" src="{{ '/assets/images/carousel-1.jpg' | relative_url }}" alt="First slide">
+    </div>
+    <div class="carousel-item h-100">
+      <img class="carousel-fit" src="{{ '/assets/images/carousel-2.jpg' | relative_url }}" alt="Second slide">
+    </div>
+    <div class="carousel-item h-100">
+      <img class="carousel-fit" src="{{ '/assets/images/carousel-3.jpg' | relative_url }}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#top-carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#top-carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container">
+  <section class="text-center py-3 mt-5">
+    <h2>About Us</h2>
+    <div class="short-divider"></div>
+    <p>
+      We are the major supplier for refurbished & new Multi Functional Printer, genuine
+      consumables and parts in Sarawak. We also supply Interactive Board, Wireless
+      Communication and the supply, design to manufacturing of t-shirts.
+    </p>
+    <p>
+      Established since 2002, we are the appointed Authorised Dealer and Service Provider
+      for Multi Functional Printer in Sarawak. We are also the authorised design centre for
+      the customised manufacturing of t-shirts.
+    </p>
+  </section>
+
+  <section id="services" class="text-center py-3 mb-5">
+    <h2>Products and Services</h2>
+    <div class="short-divider"></div>
+    <div class="row">
+      {%- for item in site.data.services -%}
+        <div class="col-lg-4 mb-3 mb-lg-0">
+          <div class="card md-whiteframe-2dp h-100">
+            <div class="carousel slide carousel-fade" data-ride="carousel">
+              <div class="carousel-inner" style="height: 200px;">
+                {%- for img in item.imgs -%}
+                  <div class="carousel-item h-100 {% if forloop.first -%} active {%- endif -%}">
+                    <img class="d-block h-100 mx-auto" src="{{ img.src | relative_url }}" alt="{{ img.alt }}">
+                  </div>
+                {%- endfor -%}
+              </div>
+            </div>
+            <div class="card-body">
+              <h4>{{ item.name }}</h4>
+              <p class="text-black-50">{{ item.desc }}</p>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+
+<div id="about-us" class="container">
+  <h1 class="text-center my-3">Corporate Profile</h1>
+
+  <section class="text-center py-3">
+    <h2>Overview</h2>
+    <div class="short-divider"></div>
+    <p>
+      We are the major supplier for refurbished & new Multi Functional Printer, genuine
+      consumables and parts in Sarawak. We also supply Interactive Board, Wireless
+      Communication and the supply, design to manufacturing of t-shirts.
+    </p>
+    <p>
+      Established since 2002, we are the appointed Authorised Dealer and Service Provider
+      for Multi Functional Printer in Sarawak. We are also the authorised design centre for
+      the customised manufacturing of t-shirts.
+    </p>
+    <p>
+      The company is committed to excellence in pre-sales and post-sales service to meet
+      the high expectations from the industry.
+    </p>
+    <p>
+      We take pride in our technical expertise with well-trained staffs that are sensitive to
+      customer needs.
+    </p>
+  </section>
+
+  <section class="text-center py-3">
+    <h2>Information</h2>
+    <div class="short-divider"></div>
+    <table class="unbordered-table text-left mx-auto mb-5">
+      <tbody>
+        <tr>
+          <td>Company Name</td>
+          <td>Xecom Marketing & Services Co. <small>(55880)</small></td>
+        </tr>
+        <tr>
+          <td>Staff Force</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Business Address</td>
+          <td><a href="https://goo.gl/maps/TG4YnXG2PrC2">{{ site.address }}</a></td>
+        </tr>
+        <tr>
+          <td>Business</td>
+          <td>Sales, Service & Rental of Office Equipment and Consumables</td>
+        </tr>
+        <tr>
+          <td>URL</td>
+          <td>{{ site.url }}</td>
+        </tr>
+        <tr>
+          <td>Licenses</td>
+          <td>
+            <a class="mr-3" href="{{ '/assets/files/xc_mof.pdf' | relative_url }}" download="xecom_mof_certificate">
+              MOF Registration
+            </a>
+            <a href="{{ '/assets/files/xc_mof.pdf' | relative_url }}" download="xecom_mof_certificate">
+              UPKJ Registration
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="text-center py-3 mb-5">
+    <h2>Our Customers</h2>
+    <div class="short-divider"></div>
+    <div>
+      {%- for item in site.data.customers -%}
+        <img
+          class="display-inline-block m-1"
+          src="{{ item.src | relative_url }}"
+          alt="{{ item.name }}"
+          title="{{ item.name }}"
+          width="{{ item.width }}"
+        >
+      {%- endfor -%}
+    </div>
+  </section>
+</div>

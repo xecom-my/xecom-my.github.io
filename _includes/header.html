@@ -1,0 +1,40 @@
+<header style="height: 59px;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top md-top-nav-bar" style="z-index: 810;">
+    <div class="container">
+      <a class="navbar-brand" href="{{ '/' | relative_url}}">
+        <img class="d-inline-block align-top brand" src="{{ '/assets/images/xecom.png' | relative_url }}">
+        <span class="navbar-text d-none d-md-inline-block py-0 ml-2">Xecom Marketing & Services Co. <small>(55880)</small></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarText" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          {%- for item in site.data.navigation -%}
+            <li class="nav-item {% if item.link == page.url %} active {%- endif -%} {% if item.branch %} dropdown {%- endif -%}">
+              <a class="nav-link {% if item.branch %} dropdown-toggle {%- endif -%}" href="{{ item.link | relative_url }}" {%- if item.branch -%} id="{{ item.link }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {%- endif -%}>
+                {{ item.name }}
+                {% if item.link == page.url %}
+                  <span class="sr-only">(current)</span>
+                {%- endif -%}
+              </a>
+              {%- if item.branch -%}
+                <div class="dropdown-menu" aria-labelledby="{{ item.link }}">
+                  {%- for sub_item in item.branch -%}
+                    {%- assign chain_link = item.link | append: sub_item.link -%}
+                    <a class="dropdown-item {% if chain_link == page.url %} active {%- endif -%}" href="{{ chain_link | relative_url }}">
+                      {{ sub_item.name }}
+                      {% if chain_link == page.url %}
+                        <span class="sr-only">(current)</span>
+                      {%- endif -%}
+                    </a>
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

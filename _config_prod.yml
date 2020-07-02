@@ -1,0 +1,5 @@
+# _config_production.yml is used for Production builds by specifying
+# 'bundle exec jekyll build --config _config.yml,_config_prod.yml'
+# This is because Jekyll's JEKYLL_ENV command doesn't work on Windows :(
+# Side Note: GitHub Pages actually set JEKYLL_ENV when it builds itself
+environment: production

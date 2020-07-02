@@ -1,0 +1,12 @@
+<div class="text-center">
+  {%- if include.title -%}
+    <h2>{{ include.title }}</h2>
+    <div class="bg-dark mx-auto" style="width: 222px; height: 1px;"></div>
+  {%- endif -%}
+  {%- if include.desc -%}
+    <p>{{ include.desc }}</p>
+  {%- endif -%}
+  {%- if include.html -%}
+    {{ include.html }}
+  {%- endif -%}
+</div>

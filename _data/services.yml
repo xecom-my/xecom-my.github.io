@@ -1,0 +1,23 @@
+- name: Products
+  desc: Multi-functional printers, interactive screen, walkie talkie and T-shirts
+  imgs: 
+    - src: '/assets/images/machine.jpeg'
+      alt: machine
+    - src: '/assets/images/interactive-screen.jpeg'
+      alt: interactive screen
+    - src: '/assets/images/walkie-talkie.png'
+      alt: walkie talkie
+    - src: '/assets/images/shirt.png'
+      alt: t-shirt
+- name: Consumables and Parts
+  desc: Sales of consumables and parts
+  imgs: 
+    - src: '/assets/images/parts-1.jpg'
+      alt: parts-1
+    - src: '/assets/images/parts-2.jpg'
+      alt: parts-2
+- name: Transportation
+  desc: Delivery of copiers
+  imgs: 
+    - src: '/assets/images/van.jpg'
+      alt: van
