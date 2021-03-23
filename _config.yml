@@ -7,7 +7,8 @@ url: "https://xecom-my.github.io" # the base hostname & protocol for your site, 
 date_format: "%b %-d, %Y"
 email: xecom.my@gmail.com
 google_analytics: 
-address: 355, 1st Floor, Tabuan Laru Commercial Centre, Jalan Setia Raja, 93350 Kuching. Sarawak. Malaysia.
+address: B3-1-12, Block B3, Level 1, Canaan Square Business Hub, Jalan Stutong Baru, 93250 Kuching. Sarawak. Malaysia.
+address_link: https://goo.gl/maps/nhNTUTs2r6KM3pNz7
 
 # Defaults
 defaults:
