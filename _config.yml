@@ -31,5 +31,3 @@ exclude:
   - README.md
   - LICENSE
   - "*.code-workspace"
-
-theme: jekyll-theme-minimal
