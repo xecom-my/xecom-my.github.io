@@ -17,6 +17,10 @@ defaults:
     values:
       layout: "default"
 
+# Sass doesn't work with @use
+sass:
+  silence_deprecations: ['import']
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
